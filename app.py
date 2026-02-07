@@ -1,5 +1,5 @@
 import streamlit as st
-import joblib
+import pickle
 import numpy as np
 import time
 
@@ -11,10 +11,10 @@ st.set_page_config(
 )
 
 # ================= LOAD MODELS =================
-vectorizer = joblib.load("tfidf_vectorizer.pkl")
-category_model = joblib.load("category_model.pkl")
-priority_model = joblib.load("priority_model.pkl")
-queue_model = joblib.load("queue_model.pkl")
+vectorizer = pickle.load(open("tfidf_vectorizer.pkl", "rb"))
+category_model = pickle.load(open("category_model.pkl", "rb"))
+priority_model = pickle.load(open("priority_model.pkl", "rb"))
+queue_model = pickle.load(open("queue_model.pkl", "rb"))
 
 # ================= PREMIUM CSS =================
 st.markdown("""
@@ -150,7 +150,3 @@ elif page == "📘 About Project":
     """)
 
     st.markdown('</div>', unsafe_allow_html=True)
-
-
-
-

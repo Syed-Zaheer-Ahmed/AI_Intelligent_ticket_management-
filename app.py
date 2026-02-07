@@ -11,12 +11,14 @@ st.set_page_config(
 )
 
 # ================= LOAD MODELS =================
+# ================= LOAD MODELS =================
 import joblib
 
-joblib.dump(vectorizer, "tfidf_vectorizer.pkl")
-joblib.dump(category_model, "category_model.pkl")
-joblib.dump(priority_model, "priority_model.pkl")
-joblib.dump(queue_model, "queue_model.pkl")
+vectorizer = joblib.load("tfidf_vectorizer.pkl")
+category_model = joblib.load("category_model.pkl")
+priority_model = joblib.load("priority_model.pkl")
+queue_model = joblib.load("queue_model.pkl")
+
 
 # ================= PREMIUM CSS =================
 st.markdown("""
@@ -152,4 +154,5 @@ elif page == "📘 About Project":
     """)
 
     st.markdown('</div>', unsafe_allow_html=True)
+
 

@@ -13,10 +13,10 @@ st.set_page_config(
 
 # ================= LOAD MODELS =================
 try:
-    vectorizer = joblib.load("tfidf_vectorizer.joblib")
-    category_model = joblib.load("category_model.joblib")
-    priority_model = joblib.load("priority_model.joblib")
-    queue_model = joblib.load("queue_model.joblib")
+vectorizer = joblib.load("tfidf_vectorizer.joblib")
+category_model = joblib.load("category_model.joblib")
+priority_model = joblib.load("priority_model.joblib")
+queue_model = joblib.load("queue_model.joblib")
 except FileNotFoundError as e:
     st.error(f"Model file not found: {e}")
     st.stop()
@@ -157,5 +157,6 @@ elif page == "📘 About Project":
     """)
 
     st.markdown('</div>', unsafe_allow_html=True)
+
 
 

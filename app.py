@@ -11,11 +11,17 @@ st.set_page_config(
 )
 
 # ================= LOAD MODELS =================
-vectorizer = pickle.load(open("tfidf_vectorizer.pkl", "rb"))
-category_model = pickle.load(open("category_model.pkl", "rb"))
-priority_model = pickle.load(open("priority_model.pkl", "rb"))
-queue_model = pickle.load(open("queue_model.pkl", "rb"))
-
+try:
+    vectorizer = joblib.load("tfidf_vectorizer.joblib")
+    category_model = joblib.load("category_model.joblib")
+    priority_model = joblib.load("priority_model.joblib")
+    queue_model = joblib.load("queue_model.joblib")
+except FileNotFoundError as e:
+    st.error(f"Model file not found: {e}")
+    st.stop()
+except Exception as e:
+    st.error(f"Error loading models: {e}")
+    st.stop()
 # ================= PREMIUM CSS =================
 st.markdown("""
 <style>
@@ -150,3 +156,4 @@ elif page == "📘 About Project":
     """)
 
     st.markdown('</div>', unsafe_allow_html=True)
+

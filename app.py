@@ -26,11 +26,9 @@ except Exception as e:
 # ================= PREMIUM CSS =================
 st.markdown("""
 <style>
-
 body {
     background-color: #0e1117;
 }
-
 .glass {
     background: rgba(255,255,255,0.05);
     padding: 25px;
@@ -38,18 +36,15 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
-
 .big-title {
     font-size: 40px;
     font-weight: bold;
     color: #4CAF50;
 }
-
 .subtitle {
     color: gray;
     margin-bottom: 20px;
 }
-
 .stButton>button {
     background: linear-gradient(90deg, #4CAF50, #00c6ff);
     color: white;
@@ -58,7 +53,6 @@ body {
     width: 100%;
     font-size: 18px;
 }
-
 </style>
 """, unsafe_allow_html=True)
 
@@ -107,15 +101,12 @@ if page == "🏠 Home":
             priority = priority_model.predict(vect)[0]
             team = queue_model.predict(vect)[0]
 
-            # Fake confidence (optional)
             confidence = np.random.uniform(85, 98)
 
         st.success("✅ Ticket Processed Successfully")
-
         st.markdown("<br>", unsafe_allow_html=True)
 
         c1, c2, c3, c4 = st.columns(4)
-
         c1.metric("📂 Category", category)
         c2.metric("⚡ Priority", priority)
         c3.metric("👨‍💻 Team", team)
@@ -127,7 +118,6 @@ elif page == "📘 About Project":
     st.markdown('<div class="glass">', unsafe_allow_html=True)
 
     st.header("📘 Project Overview")
-
     st.write("""
     This AI system assists IT teams by automatically:
 
@@ -139,7 +129,6 @@ elif page == "📘 About Project":
     """)
 
     st.header("🤖 Models Used")
-
     st.write("""
     ✔ TF-IDF Vectorization  
     ✔ Machine Learning Classification Models  
@@ -147,7 +136,6 @@ elif page == "📘 About Project":
     """)
 
     st.header("🚀 Future Improvements")
-
     st.write("""
     ✔ Real-time ticket dashboard  
     ✔ Model confidence visualization  
@@ -157,7 +145,3 @@ elif page == "📘 About Project":
     """)
 
     st.markdown('</div>', unsafe_allow_html=True)
-
-
-
-

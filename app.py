@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import numpy as np
 import time
+import joblib
 
 # ================= PAGE CONFIG =================
 st.set_page_config(
@@ -156,4 +157,5 @@ elif page == "📘 About Project":
     """)
 
     st.markdown('</div>', unsafe_allow_html=True)
+
 

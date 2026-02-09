@@ -147,20 +147,6 @@ joblib
 * Add dashboard analytics
 * Integrate with real ticketing systems (Jira, ServiceNow)
 
----
-
-## 👨‍💻 Author
-
-**Syed Zaheer**
-
----
-
-## ⭐ If you like this project
-
-Give it a star on GitHub and share it!
-
----
-
 # 🧪 Example Queries to Try
 
 Paste these into the app:
@@ -198,3 +184,18 @@ It helps companies:
 * NLP (TF-IDF)
 * Streamlit
 * Joblib
+
+---
+
+## 👨‍💻 Author
+
+**Syed Zaheer**
+
+---
+
+## ⭐ If you like this project
+
+Give it a star on GitHub and share it!
+
+---
+

@@ -62,10 +62,10 @@ Models were saved using **pickle/joblib**:
 
 ```
 models/
- ├── team_model.pkl
- ├── vectorizer.pkl
- ├── priority_model.pkl
- └── priority_vectorizer.pkl
+├── category_model.joblib
+├── priority_model.joblib
+├── queue_model.joblib
+├── tfidf_vectorizer.joblibl
 ```
 
 ---
@@ -89,14 +89,19 @@ The Streamlit app allows users to enter a ticket and instantly receive predictio
 ## 📂 Project Structure
 
 ```
-AI_IT_Ticket_Assistant/
-├── Notebooks.ipynb
-├── vectorizer.pkl
-├── priority_model.pkl
-├── priority_vectorizer.pkl
+
+AI-IT-Ticket-Assistant/
+│
+├── README.md
+├── Notebook.ipynb
 ├── app.py
 ├── requirements.txt
-└── README.md
+│
+├── category_model.joblib
+├── priority_model.joblib
+├── queue_model.joblib
+├── tfidf_vectorizer.joblib
+
 ```
 
 

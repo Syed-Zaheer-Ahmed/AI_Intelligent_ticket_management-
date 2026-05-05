@@ -193,9 +193,8 @@ It helps companies:
 
 ---
 
-## ⭐ If you like this project
-
-Give it a star on GitHub and share it!
+## Streamlit Deployment Link
+https://cdq6gjyqtepimt2lefixd8.streamlit.app/
 
 ---
 

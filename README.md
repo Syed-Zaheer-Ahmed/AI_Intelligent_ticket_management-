@@ -119,7 +119,7 @@ Users cannot connect to VPN from remote locations.
 **Output:**
 
 ```
-Team: Network Team
+Team: Technical Support
 Priority: 2
 ```
 
